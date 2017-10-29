@@ -1,0 +1,46 @@
+{
+  "name": "atra-spinkit",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "atra": "^1.1.0",
+    "create-keyframes": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "prettier": "^1.7.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": "last 2 versions"
+          }
+        }
+      ],
+      "flow",
+      "react"
+    ]
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "scripts": {
+    "dll": "webpack --config webpack.config.dll.babel.js",
+    "start": "webpack-dev-server --config webpack.config.babel.js",
+    "format": "prettier --write **/*.js package.json"
+  }
+}
